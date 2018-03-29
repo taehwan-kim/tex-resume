@@ -40,6 +40,9 @@
 \graphicspath{{.}{.}}
 \DeclareGraphicsExtensions{.pdf,.jpg,.png}
 
+\usepackage{times}
+%\usepackage{fontspec}
+%\setmainfont{Times New Roman}
 % Simpler bibsection for CV sections
 % (thanks to natbib for inspiration)
 \linespread{0.97}
@@ -302,9 +305,11 @@
 %\end{innerlist}
 
 \section{Research Interests}
-Electronic-photonic integrated systems for communication/sensing \\
-Electronic-photonic integration technology \& design methodology development\\
-Analog/mixed-signal integrated circuit design
+Electronic-photonic integrated systems for free-space communication/sensing\\
+Novel reconstruction algorithms for sensing systems\\ 
+Analog/mixed-signal integrated circuit design, high-performing/efficient IO technology
+
+%Electronic-photonic integration technology \& design methodology development\\
     
 \section{Education}
 %\begin{outerlist}
@@ -338,31 +343,46 @@ Analog/mixed-signal integrated circuit design
 \href{http://www.snu.ac.kr}{\textbf{University of California, Berkeley}} \hfill \textit{Aug. 2014 to Present}
 %(\textit{Anticipated})
 \begin{outerlist}
-\item[] Ph.D. Student in Electrical Engineering and Computer Science
+\item[] Ph.D. Student in Electrical Engineering and Computer Sciences
 \end{outerlist}
 \href{http://www.snu.ac.kr}{\textbf{Seoul National University}}\hfill \textit{Mar. 2007 to Feb. 2014}
 %(\textit{Anticipated})
 \begin{outerlist}
 \item[] B.S. in \href{http://ece.snu.ac.kr} Electrical and Computer Engineering
-\item[] B.A. in \href{http://econ.snu.ac.kr} Economics (Double major)
+\item[] B.A. in \href{http://econ.snu.ac.kr} Economics (Double Major)
 \end{outerlist}
 
 
 \section{Research Experience}
+
+\textbf{Graduate Technical Intern}  \hfill \textit{May. 2017 to present}
+\begin{outerlist}
+\item[] PHY Research Lab, Intel Labs, Santa Clara, CA
+	\begin{innerlist}
+     \item Advanced system-level techniques for integrated optical links
+     \begin{innerlist}
+     \item[-] US patent filed
+
+     \end{innerlist}
+     \end{innerlist}
+     \end{outerlist}
+
 \textbf{Graduate Student Researcher}  \hfill \textit{Aug. 2014 to present}
 \begin{outerlist}
 \item[] Integrated Systems Group, University of California, Berkeley (Advisor: Vladimir Stojanovi{\'c})
 	\begin{innerlist}
-     \item Optical phased array based systems in electronic-photonic heterogeneous integration platform
+     \item Free-space optical systems in electronic-photonic integration platform
      \begin{innerlist}
-     \item[-] Developing single-chip solution for ultra high-resolution laser radar (LIDAR) and free-space optical communication links leveraging optical phased arrays
-     \item[-] Tape-out in early 2016 (65nm 10LPe process)
+     \item[-] Goal: realization of an integrated solution for ultra high-resolution FMCW LIDAR and free-space optical communication links leveraging silicon photonics technology 
+     \item[-] Developing system and circuit-level techniques for 1) laser modulation/synchronization (optical PLL for FMCW modulation/multi-laser synchronization) 2) scalable beam-steering system 3) FMCW detection algorithms for coherence distance limited systems 
+     \item[-] Various system-level budget analysis for LIDAR/communication applications
+     \item[-] First tape-out done in early 2016 in 65nm 10LPe CMOS/300mm photonics 3D-integration platform
+     \item[-] Optical PLL tape-out done in 2017 in 45nm SOI
      \end{innerlist}
-     \item Model-predictive control based algorithm for equalization of high-speed links
+     \item Model Predictive Control algorithm (MPC) based equalization of high-speed links
      \begin{innerlist}
-     \item[-] Transmitter-side algorithm based on digital channel models for modular, energy-efficient equalization of asymmetric high-speed interfaces
-     \item[-] Built chips in 28nm FDSOI \& 45nm SOI process
-     \item[-] Chip measurement in progress
+     \item[-] Demonstration of TX-side equalization scheme based on channel models for flexible, energy-efficient equalization of asymmetric high-speed interfaces (e.g. processor-memory, switches)
+     \item[-] Built/measured chips in 28nm FDSOI \& 45nm SOI, paper accepted
      \end{innerlist}
      \end{innerlist}
      \end{outerlist}
@@ -373,21 +393,30 @@ Analog/mixed-signal integrated circuit design
 	\begin{innerlist}
      \item Formal verification of analog/mixed-signal circuits 
      \begin{innerlist}
-     \item[-] Developed an algorithm to verify the correct start-up behavior of ring oscillators in presence of variability
-     \item[-] Implemented GCHECK: a Python-based tool for detection of start-up failures of coupled ring oscillators (transferred to Samsung Electronics)
+     \item[-] Developed an algorithm to verify correctness of start-up behavior of ring oscillators in presence of variability
+     \item[-] Implemented GCHECK: a Python-based tool for detection of start-up failures of coupled ring oscillators (transferred to Samsung Electronics, patent issued)
      \end{innerlist}
      \item Variability-aware circuit optimization
      \begin{innerlist}
-     \item[-] Developing global optimizer for analog/mixed-signal circuits based on statistical metamodeling
+     \item[-] Developed global optimizer for analog/mixed-signal circuits based on statistical metamodeling
      \end{innerlist}
      \end{innerlist}     
 \end{outerlist}
 
 \section{Publications} \label{Sec:PUB}
-{\bf T. Kim}, D.-G. Song, S. Youn, J. Park, H. Park, and J. Kim, ``Verifying Start-Up Failures in Coupled Ring Oscillators in Presence of Variability Using Predictive Global Optimization," in \emph{Proc. IEEE/ACM International Conference on Computer-Aided Design (ICCAD)}, 2013. \\
+{\bf T. Kim}, P. Bhargava, V. Stojanovi{\'c}, ``Overcoming the Coherence Distance Barrier in Long-Range FMCW LIDAR," \emph{Conference on Lasers and Electro-Optics (CLEO)}, 2018. \\
 \vspace{-.6\baselineskip}
 
-J. Kim, J. Lee, D.-G. Song, {\bf T. Kim}, K.-H. Kim, S. Jung, and S. Youn, ``Discretization and Discrimination Methods for Design, Verification, and Testing of Analog/Mixed Signal Circuits," in \emph{Proc. Custom Integrated Circuits Conference (CICC)}, 2013.
+{\bf T. Kim}, P. Bhargava, V. Stojanovi{\'c}, ``Optimal Spectral Estimation and System Trade-Off in Long-Distance Frequency-Modulated Continuous-Wave LIDAR," \emph{IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP)}, 2018. \\
+\vspace{-.6\baselineskip}
+
+{\bf T. Kim}, P. Bhargava, V. Stojanovi{\'c}, ``A Model Predictive Control Equalization Transmitter for Asymmetric Interfaces in 28nm FDSOI,” \emph{IEEE Asian Solid-State Circuits Conference (ASSCC)}, 2016. \\
+\vspace{-.6\baselineskip}
+
+{\bf T. Kim}, D.-G. Song, S. Youn, J. Park, H. Park, and J. Kim, ``Verifying Start-Up Failures in Coupled Ring Oscillators in Presence of Variability Using Predictive Global Optimization," \emph{IEEE/ACM International Conference on Computer-Aided Design (ICCAD)}, 2013. \\
+\vspace{-.6\baselineskip}
+
+J. Kim, J. Lee, D.-G. Song, {\bf T. Kim}, K.-H. Kim, S. Jung, and S. Youn, ``Discretization and Discrimination Methods for Design, Verification, and Testing of Analog/Mixed Signal Circuits," \emph{Custom Integrated Circuits Conference (CICC)}, 2013.
 
 % Add a little space to nudge next ``Conference Publications'' marginpar
 % down to make room for tall ``Submitted Journal Publications''
@@ -397,13 +426,12 @@ J. Kim, J. Lee, D.-G. Song, {\bf T. Kim}, K.-H. Kim, S. Jung, and S. Youn, ``Dis
 
 \section{Honors \& Awards}
 Kwanjeong Scholarship for Abroad Studies \hfill \textit{2014-2018}\\
-National Scholarship for Science and Engineering, Korea Science Foundation \hfill \textit{2007-2013}\\
+National Scholarship for Science and Engineering, Korea Science Foundation \hfill \textit{2007-2013}
 
 \section{Skills}
 %\begin{comment}
-Languages: C, C++, Python, Verilog\\
-Tools: Custom IC (Virtuoso, ADS) and VLSI design tools (DC, ICC, RC, SOC-ENC), \Matlab\\
-Operating Systems: OSX, Linux, Windows 
+Languages: C, C++, Python, Verilog, Verilog-A\\
+Tools: Custom IP block and VLSI design/verification tools (Virtuoso, ADS, DC, ICC, RC, SOC-ENC, Calibre), \Matlab
 %\end{comment}
 
 \end{document}
